@@ -12,7 +12,7 @@ nav{
 }
 
 .NavBar{
-    background: #718997;
+    background: #678594;
     height: 60px;
     display: flex;
     align-items: center;
@@ -49,7 +49,7 @@ nav{
 }
 
 .navLinks li a:hover{
-    background-color: #5a6c7d;
+    background-color: #5a7480;
 }
 
 a{
@@ -64,10 +64,66 @@ a{
     border-radius: 10px;
 }
 
+.homepageContainer{
+    background-color: #ffff;
+}
+
 #navtitle{
     font-size: 24px;
     font-weight: bold;
     color: white;
+    border-radius:10px;
+}
+#navtitle:hover{
+    box-shadow:0 0 0 8px rgba(0, 0, 0, 0.1);
+    background-color: #5a7480;
+}
+
+#titleCard{
+    text-align: center;
+    padding: 4rem;
+    background: linear-gradient(rgba(77, 75, 75, 0.705),rgba(19, 18, 18, 0.932)), url('/IEEE-UNLV-Website/images/Soldering.jpg');
+    background-size: cover;
+    background-position: center;
+    
+}
+
+#about{
+    padding: 8rem;
+    background-color: #106894;
+    opacity: 0.9;
+    margin: 0 auto;
+    text-align: center;
+    /*clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);*/
+    background-size:cover;
+    background-position:center;
+}
+
+#events{
+    padding: 8rem;
+    background-color: #024363;
+    opacity: 0.9;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#membership{
+    padding: 8rem;
+    background-color: #106894;
+    opacity: 0.9;
+    margin: 0 auto;
+    text-align: center;
+    /*clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);*/
+}
+
+footer{
+    background-color: #678594;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 /*Navigation Menu when browswer is 960px or leass*/
@@ -78,7 +134,7 @@ a{
         position: absolute;
         top: 65px;
         right:5px;
-        background-color: #718997;
+        background-color: #678594;
         width: 25%;
         border-radius:30px;
         text-align:center;
@@ -91,7 +147,7 @@ a{
     }
 
     .navLinks li:hover{
-        background-color: #5a6c7d;
+        background-color: #5a7480;
     }
 
     .navLinks.active {
@@ -99,10 +155,10 @@ a{
     }
 
     #hamburgerMenu{
-        display: inline-block;
-        cursor: pointer;
-        padding: 13px;
-        border-radius: 10px;
+    display: inline-block;
+    cursor: pointer;
+    padding: 13px;
+    border-radius: 10px;
     }
 
     #hamburgerMenu span{
@@ -114,7 +170,7 @@ a{
     }
 
     #hamburgerMenu:hover{
-        background-color: #5a6c7d;
+        background-color: #5a7480;
         transition: ease-in 0.1s;
     }
     

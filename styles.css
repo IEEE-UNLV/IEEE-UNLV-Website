@@ -49,7 +49,7 @@ nav{
 }
 
 .navLinks li a:hover{
-    background-color: #28405e;
+    background-color: #162231;
 }
 
 a{
@@ -75,7 +75,7 @@ a{
 }
 #navtitle:hover{
     box-shadow:0 0 0 8px rgba(0, 0, 0, 0.2);
-    background-color: #28405e;
+    background-color: #162231;
 }
 
 #titleCard{
@@ -109,10 +109,10 @@ a{
 
 section{
     padding: 4rem;
-    opacity: 0.9;
-    margin: 0 auto;
+    margin: 0;
     text-align: center;
     background-color:#0f1e2c;
+
 }
 
 hr{
@@ -122,8 +122,6 @@ hr{
 
 #about{
     padding: 8rem;
-    opacity: 0.9;
-    margin: 0 auto;
     text-align: center;
     background-size:cover;
     background-position:center;
@@ -136,8 +134,14 @@ hr{
 
 #about p{
     font-size: 1.2rem;
-    margin: 1rem 0;
+    margin: 20px;
+    justify-content: center;
+    
     color: rgba(255, 255, 255, 0.637);
+    background-color:#172c3f;
+    border-radius: 10px;
+    border: 5px solid #1b2c41;
+    padding:20px;
 }
 
 .AboutButton{
@@ -152,14 +156,28 @@ hr{
 
 #events{
     padding: 8rem;
-    opacity: 0.9;
-    margin: 0 auto;
     text-align: center;
+    background-size:cover;
+    background-position:center;
+}
+
+#events h2{
+    font-size:2.5rem;
+    margin-bottom:1rem;
+}
+
+#events p{
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    color: rgba(255, 255, 255, 0.637);
+    background-color:#172c3f;
+    border-radius: 10px;
+    border: 5px solid #1b2c41;
+    padding:20px;
 }
 
 #membership{
     padding: 8rem;
-    opacity: 0.9;
     margin: 0 auto;
     text-align: center;
 }
@@ -181,7 +199,7 @@ footer{
         position: absolute;
         top: 65px;
         right:5px;
-        background-color: #314f74;;
+        background-color: #1d2f44;
         width: 25%;
         border-radius:30px;
         text-align:center;
@@ -194,7 +212,7 @@ footer{
     }
 
     .navLinks li:hover{
-        background-color: #28405e;
+        background-color: #162231;
     }
 
     .navLinks.active {
@@ -217,7 +235,7 @@ footer{
     }
 
     #hamburgerMenu:hover{
-        background-color: #28405e;
+        background-color: #162231;
         transition: ease-in 0.1s;
     }
     

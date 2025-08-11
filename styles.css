@@ -1,5 +1,5 @@
 *{
-    font-family: Roboto, sans-serif;
+    font-family: 'roboto', sans-serif;
     color:white;
     padding:0px;
     margin:0px;
@@ -12,7 +12,7 @@ nav{
 }
 
 .NavBar{
-    background: #678594;
+    background: #1d2f44;
     height: 60px;
     display: flex;
     align-items: center;
@@ -49,7 +49,7 @@ nav{
 }
 
 .navLinks li a:hover{
-    background-color: #5a7480;
+    background-color: #28405e;
 }
 
 a{
@@ -59,9 +59,7 @@ a{
 }
 
 .IEEE-Logo{
-    height:20px;
-    margin-right:5px;
-    border-radius: 10px;
+    margin-right:3px;
 }
 
 .homepageContainer{
@@ -69,39 +67,91 @@ a{
 }
 
 #navtitle{
-    font-size: 24px;
+    font-size: 25px;
     font-weight: bold;
     color: white;
     border-radius:10px;
+    display: flex;
 }
 #navtitle:hover{
-    box-shadow:0 0 0 8px rgba(0, 0, 0, 0.1);
-    background-color: #5a7480;
+    box-shadow:0 0 0 8px rgba(0, 0, 0, 0.2);
+    background-color: #28405e;
 }
 
 #titleCard{
     text-align: center;
-    padding: 4rem;
-    background: linear-gradient(rgba(77, 75, 75, 0.705),rgba(19, 18, 18, 0.932)), url('/IEEE-UNLV-Website/images/Soldering.jpg');
+    font-size:20px;
+    background: linear-gradient(rgba(76, 86, 95, 0.705),rgba(23, 43, 63, 0.932)), url('/IEEE-UNLV-Website/images/Soldering.jpg');
     background-size: cover;
-    background-position: center;
-    
+    background-position: center; 
+    padding:10rem;
+}
+
+#titleCard h1{
+    font-size: 3rem;
+    color: #ffffff;
+    margin: 2rem;
+    text-align: center;
+}
+
+#titleCard p{
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.637);
+    margin: 1rem;
+    text-align: center;
+}
+
+.Home-IEEE-Logo{
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+section{
+    padding: 4rem;
+    opacity: 0.9;
+    margin: 0 auto;
+    text-align: center;
+    background-color:#0f1e2c;
+}
+
+hr{
+    width: 100%;
+    opacity:50%;
 }
 
 #about{
     padding: 8rem;
-    background-color: #106894;
     opacity: 0.9;
     margin: 0 auto;
     text-align: center;
-    /*clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);*/
     background-size:cover;
     background-position:center;
 }
 
+#about h2{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#about p{
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    color: rgba(255, 255, 255, 0.637);
+}
+
+.AboutButton{
+    background-color: #28405e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
 #events{
     padding: 8rem;
-    background-color: #024363;
     opacity: 0.9;
     margin: 0 auto;
     text-align: center;
@@ -109,16 +159,13 @@ a{
 
 #membership{
     padding: 8rem;
-    background-color: #106894;
     opacity: 0.9;
     margin: 0 auto;
     text-align: center;
-    /*clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);*/
 }
 
 footer{
-    background-color: #678594;
-    color: white;
+    background-color: #1d2f44;
     text-align: center;
     padding: 20px 0;
     position: relative;
@@ -134,7 +181,7 @@ footer{
         position: absolute;
         top: 65px;
         right:5px;
-        background-color: #678594;
+        background-color: #314f74;;
         width: 25%;
         border-radius:30px;
         text-align:center;
@@ -147,7 +194,7 @@ footer{
     }
 
     .navLinks li:hover{
-        background-color: #5a7480;
+        background-color: #28405e;
     }
 
     .navLinks.active {
@@ -170,7 +217,7 @@ footer{
     }
 
     #hamburgerMenu:hover{
-        background-color: #5a7480;
+        background-color: #28405e;
         transition: ease-in 0.1s;
     }
     

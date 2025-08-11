@@ -1,56 +1,68 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>IEEE UNLV</title>
-        <link rel="stylesheet" href="styles.css"/>
-        <link rel="membership" href="membership.html">
-        <link rel="contacts" href="contact.html">
-        <link rel="events" href="events.html">
-        <link rel="about" href="about.html">
-    </head>
-    <body>
-        <header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEEE - University of Nevada, Las Vegas</title>
+    <link rel="icon" href="/IEEE-UNLV-Website/images/IEEE-Logo4.png" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <nav class="NavBar">
+        <div class="navContainer">
+            <a href="" id="navtitle"><img src="/IEEE-UNLV-Website/images/IEEE-Logo4.png" alt="IEEUnlvLogo" class="IEEE-Logo" width="35">IEEE at UNLV</a>
+            <div id="hamburgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navLinks">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#membership">Join Us</a></li>
+                <li><a href="#officers">Officers</a></li>
+                <li><a href="#contact">Contacts</a></li>
+            </ul>
+        </div>
+    </nav>
+    <script src="script.js"></script>   
+        
+    <div class="homepageContainer">
+        <section id="titleCard">
+            <img src="/IEEE-UNLV-Website/images/IEEE-Logo4.png" alt="IEEUnlvLogo" class="Home-IEEE-Logo" width="200">
+            <h1>IEEE - University of Nevada, Las Vegas</h1>
+            <hr>
+            <p>Student branch of Insitute of Electrical and Eletronics Engineers at University of Nevada, Las Vegas</p>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <hr>
+            <p>
+                IEEE at UNLV is dedicated to the education and professional development of students
+                in the field of electrical, electronics, communications, computer engineering, and
+                computer science. We strive for the enhancing the learning experience through viable means.
+            </p>
+            <button class="AboutButton"><a href="#about">Learn More</a></button>
+        </section>
 
-            <nav class="navbar">
-                <div class="navbar__container">
-                    <a href="" id="navbar-logo"><!--<img src="images/IEEELogo.svg" alt="IEEE Logo" width="30">--> IEEE UNLV</a>
-                    <div class="navbar_icon">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
+        <section id="events">
+            <h2>Upcoming Events</h2>
+            <hr>
+            <p>Check out our latest events and workshops designed to enhance your skills and network with professionals.</p>
+            <button class="EventsButton"><a href="#events">Events</a></button>
+        </section>
 
-                    <ul class="navbar_menu">
-                        <li class="navbar_item">
-                            <a href="about.html" class ="navbar_links">About Us</a>
-                        </li>
-                        <li class="navbar_item">
-                            <a href="events.html" class="navbar_links">Events</a>
-                        </li>
-                        <li class="navbar_item">
-                            <a href="contact.html" class="navbar_links">Contact</a>
-                        </li>
-                        <!--<li class="navbar_btn mobile">
-                            <a href="membership.html" class="navbar_links">Membership</a>
-                        </li>-->
-                    </ul>
-
-                    <!--<div class="navbar_btn desktop">
-                        <a href="membership.html" class="button">Membership</a>
-                    </div>-->
-
-                    <!--<button class="navbar_toggle" 
-                            id="mobile-menu" 
-                            aria-label="Toggle Navigation" 
-                            aria-expanded="" 
-                            false>
-                            
-                    </button>-->
-                </div>
-            </nav>
-        </header>
-        <script src="script.js"></script>
-    </body>
+        <section id="membership">
+            <h2>Join Us</h2>
+            <hr>
+            <p>Join us to become part of a global community of engineers and technologists.</p>
+            <button class="JoinButton"><a href="#membership">Join Us</a></button>
+        </section>
+    </div>
+    <footer>
+        <p>IEEE - University of Nevada, Las Vegas</p>
+        
+    </footer>
+</body>
 </html>

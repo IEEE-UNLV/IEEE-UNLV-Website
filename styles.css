@@ -62,8 +62,8 @@ a{
     margin-right:3px;
 }
 
-.homepageContainer{
-    background-color: #ffff;
+body{
+    background-color: #1d2f44;
 }
 
 #navtitle{
@@ -214,7 +214,9 @@ hr{
     padding:20px;
 }
 
-.JoinButton{
+.JoinButton, 
+.DiscordButton, 
+.InstagramButton{
     background-color: #28405e;
     color: white;
     padding: 10px 20px;
@@ -222,12 +224,15 @@ hr{
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
+    margin: 10px;
 }
 
 .AboutContainer{
     background-color: #172c3f;
-    background-size:cover;
-    padding:20px;
+}
+
+.AboutContainer p{
+    text-align:justify;
 }
 
 footer{

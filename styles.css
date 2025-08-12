@@ -224,6 +224,12 @@ hr{
     font-size: 1rem;
 }
 
+.AboutContainer{
+    background-color: #172c3f;
+    background-size:cover;
+    padding:20px;
+}
+
 footer{
     background-color: #1d2f44;
     text-align: center;

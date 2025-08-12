@@ -94,6 +94,11 @@ a{
     text-align: center;
 }
 
+#titleCard hr{
+    width: 100%;
+    opacity:50%;
+}
+
 #titleCard p{
     font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.637);
@@ -112,17 +117,18 @@ section{
     margin: 0;
     text-align: center;
     background-color:#0f1e2c;
+    justify-content: center;
 
 }
 
 hr{
-    width: 100%;
-    opacity:50%;
+    width:400px;
+    margin: auto;
 }
 
 #about{
     padding: 8rem;
-    text-align: center;
+    justify-content:center;
     background-size:cover;
     background-position:center;
 }
@@ -134,9 +140,8 @@ hr{
 
 #about p{
     font-size: 1.2rem;
-    margin: 20px;
-    justify-content: center;
-    
+    margin: 20px auto;
+    width:800px;
     color: rgba(255, 255, 255, 0.637);
     background-color:#172c3f;
     border-radius: 10px;
@@ -168,12 +173,23 @@ hr{
 
 #events p{
     font-size: 1.2rem;
-    margin: 1rem 0;
+    margin: 20px auto;
+    width: 800px;
     color: rgba(255, 255, 255, 0.637);
     background-color:#172c3f;
     border-radius: 10px;
     border: 5px solid #1b2c41;
     padding:20px;
+}
+
+.EventsButton{
+    background-color: #28405e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
 #membership{
@@ -189,8 +205,13 @@ hr{
 
 #membership p{
     font-size:1.2rem;
-    margin:1rem 0;
-     color: rgba(255, 255, 255, 0.637);
+    margin:1rem auto;
+    width:800px;
+    color: rgba(255, 255, 255, 0.637);
+    background-color:#172c3f;
+    border-radius: 10px;
+    border: 5px solid #1b2c41;
+    padding:20px;
 }
 
 .JoinButton{
@@ -271,5 +292,15 @@ footer{
         transform: rotate(45deg) translate(-5px, -6px);
     }
 
+    #about p{
+        width:300px;
+    }
     
+    #events p{
+        width:300px;
+    }
+
+    #membership p{
+        width:300px;
+    }
 }

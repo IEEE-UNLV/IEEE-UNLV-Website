@@ -244,6 +244,14 @@ footer{
     width: 100%;
 }
 
+#InvolvementLinks{
+    text-decoration:underline;
+}
+
+#footLinks{
+    margin:3px;
+}
+
 /*Navigation Menu when browswer is 960px or leass*/
 @media (max-width: 968px) {
     .navLinks {

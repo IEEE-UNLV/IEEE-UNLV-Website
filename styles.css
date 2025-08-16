@@ -63,7 +63,10 @@ a{
 }
 
 body{
-    background-color: #1d2f44;
+    background-color: #0f1e2c;
+    background-image:
+        repeating-linear-gradient(90deg,#162b3f, transparent 1px 40px),
+        repeating-linear-gradient(180deg, #162b3f, transparent 1px 40px);
 }
 
 #navtitle{
@@ -116,9 +119,6 @@ section{
     padding: 4rem;
     margin: 0;
     text-align: center;
-    background-color:#0f1e2c;
-    justify-content: center;
-
 }
 
 hr{
@@ -134,12 +134,12 @@ hr{
 }
 
 #about h2{
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
 }
 
 #about p{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin: 20px auto;
     width:800px;
     color: rgba(255, 255, 255, 0.637);
@@ -196,12 +196,12 @@ hr{
 }
 
 #events h2{
-    font-size:2.5rem;
+    font-size:3rem;
     margin-bottom:1rem;
 }
 
 #events p{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin: 20px auto;
     width: 800px;
     color: rgba(255, 255, 255, 0.637);
@@ -236,12 +236,12 @@ hr{
 
 #membership h2,
 .memberContainer h2{
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom:1rem;
 }
 
 .memberContainer section{
-    font-size:1.2rem;
+    font-size:1.5rem;
     margin:1rem auto;
     width:800px;
     color: rgba(255, 255, 255, 0.637);
@@ -252,7 +252,7 @@ hr{
 }
 
 #membership p{
-    font-size:1.2rem;
+    font-size:1.5rem;
     margin:1rem auto;
     width:800px;
     color: rgba(255, 255, 255, 0.637);
@@ -289,29 +289,51 @@ hr{
     background-color:#182638;
 }
 
-.AboutContainer{
-    background-color: #172c3f;
+.AboutContainer,
+.eventContainer,
+.memberContainer,
+.contactsContainer,
+.officerContainer{
+    background-color: #0f1e2c;
+    background-image:
+        repeating-linear-gradient(90deg,#162b3f, transparent 1px 40px),
+        repeating-linear-gradient(180deg, #162b3f, transparent 1px 40px);
 }
 
 .AboutContainer p{
     text-align:justify;
+    
 }
 
 footer{
     background-color: #1d2f44;
     text-align: center;
     padding: 20px 0;
-    position: relative;
     bottom: 0;
     width: 100%;
+    display:flex;
+    justify-content:space-between;
 }
 
-#InvolvementLinks{
-    text-decoration:underline;
+footer li{
+    list-style:none;
 }
 
-#footLinks{
-    margin:3px;
+footer p{
+}  
+
+.footer-column{
+    flex:1;
+    padding:0 10px;
+}
+
+#footerLinks{
+    font-size:15px;
+    color:#dddcdc;
+}
+
+#footerLinks:hover{
+    color:#b1b0b0;
 }
 
 /*Navigation Menu when browswer is 960px or leass*/

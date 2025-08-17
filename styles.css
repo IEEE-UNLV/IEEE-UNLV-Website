@@ -150,18 +150,74 @@ hr{
     padding:20px;
 }
 
+#aboutContainer{
+    background: linear-gradient(rgba(76, 86, 95, 0.705),rgba(16, 32, 45, 0.932)), url('/IEEE-UNLV-Website/images/IEEEBulletinFall2025.jpg');
+    background-size:cover;
+    background-attachment:fixed;
+}
+
+#aboutContainer h2{
+    font-size:2.5rem;
+}
+
+
+#WhoWeAre h3{
+    font-size:2rem;
+    text-align:center;
+    padding:20px;
+}
+
+#WhoWeAre p{
+    color: rgba(255, 255, 255, 0.637);
+}
+
+#WhoWeAre{
+    padding:20px;
+    text-align:left;
+    font-size: 1.5rem;
+    margin:20px auto;
+    padding:60px;
+}
+
 .ImageGallery{
-    width:100%;
-    overflow:hidden;
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .GalleryContent{
-    display:flex;
+    width:100%;
+    position:absolute;
 }
 
 .GalleryContent img{
-    height: 500px;
-    margin-right:20px;
+    width:100%;
+    display:block;
+    border-radius:10px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 12px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.5);
+  user-select: none;
+  transform: translateY(-50%);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
 }
 
 .AboutButton,
@@ -205,7 +261,50 @@ hr{
     padding:20px;
 }
 
+.pastEvents{
+    font-size:2rem;
+    flex-direction:column;
+    gap:12px;
+    margin-bottom:16px;
+    width:50%;
+    margin: 20px auto;
+}
 
+.pastEventContainer{    
+    font-size: 25px;
+    margin: 20px auto;
+    background-color:#172c3f;
+    border-radius: 10px;
+    border: 5px solid #1b2c41;
+    padding:20px;
+    text-align:center;
+}
+
+.eventPages{
+    display:flex;
+    justify-content:center;
+    gap:6px;
+}
+
+.eventPages button{
+    padding: 6px 12px;
+    border:1px solid #aaa;
+    background:#28405e;
+    cursor:pointer;
+    border-radius:4px;
+}
+
+.eventPages button.active{
+    background-color: #21344d;
+    color:white;
+    border-color: #21344d;
+}
+
+.pastEventContainer p{
+    color: rgba(255, 255, 255, 0.637);
+    font-size: 18px;
+    padding:10px;
+}
 
 #membership{
     padding: 8rem;
@@ -218,6 +317,10 @@ hr{
     margin: 0 auto;
     text-align:center;
     background-color:#0f1e2c;
+}
+
+.memberContainer div{
+    padding:20px;
 }
 
 #membership h2,
@@ -234,7 +337,7 @@ hr{
     background-color:#172c3f;
     border-radius: 10px;
     border: 5px solid #1b2c41;
-    padding:20px;
+    padding:60px;
 }
 
 #membership p{
@@ -303,12 +406,12 @@ footer{
 }
 
 footer h2{
-    font-size:15px;
+    font-size:20px;
     margin:10px;
 }
 
 footer span{
-    font-size:15px;
+    font-size:20px;
     font-weight:bold;
     height: 60px;
 }

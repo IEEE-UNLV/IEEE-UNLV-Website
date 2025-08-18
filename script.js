@@ -7,69 +7,85 @@ menu.addEventListener('click', function(){
     menuLinks.classList.toggle('active');
 });
 
-//Event Page Setup
-const tiles = Array.from(document.querySelectorAll('.pastEventContainer'));
-const eventPages = document.getElementById('eventPages');
-
-const pageSize = 5;
-let currentPage = 1;
-const totalPages = Math.ceil(tiles.length / pageSize);
-
-function renderPage(page){
-    currentPage = page;
-
-    tiles.forEach((tile, i) => {
-        const start = (page - 1) * pageSize;
-        const end = page * pageSize;
-        tile.style.display = (i >= start && i <end) ? 'block' : 'none';
-    });
-
-    eventPages.innerHTML = '';
-    
-    const prevBtn = document.createElement('button');
-    prevBtn.textContent = 'Prev';
-    prevBtn.disabled = page === 1;
-    prevBtn.onclick = () => renderPage(page - 1);
-    eventPages.appendChild(prevBtn);
-
-    for(let p = 1; p <= totalPages; p++)
-    {
-        const btn = document.createElement('button');
-        btn.textContent = p;
-        if(p === page) btn.classList.add('active');
-        btn.onclick = () => renderPage(p);
-        eventPages.appendChild(btn);
-    }
-
-    const nextBtn = document.createElement('button');
-    nextBtn.textContent = 'Next';
-    nextBtn.disabled = page === totalPages;
-    nextBtn.onclick = () => renderPage(page + 1);
-    eventPages.appendChild(nextBtn);
-}
-
-renderPage(1);
-
-let slideIndex = 0;
+//About Page Image Slideshow
+let current = 0;
 const slides = document.querySelectorAll('.GalleryContent');
-const totalSlides = slides.length;
-
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.remove('active');
-  });
+console.log(slides);
+function showSlide(index)
+{
+  slides.forEach(slide => slide.classList.remove('active'));
   slides[index].classList.add('active');
 }
 
-document.querySelector('.next').addEventListener('click', () => {
-  slideIndex = (slideIndex + 1) % totalSlides;
-  showSlide(slideIndex);
-});
+function nextSlide()
+{
+  console.log("nextSlide()");
+  console.log(current);
+  current = (current + 1) % slides.length;
 
-document.querySelector('.prev').addEventListener('click', () => {
-  slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
-  showSlide(slideIndex);
-});
+  showSlide(current);
+}
 
-// Show first slide
-showSlide(slideIndex);
+function prevSlide()
+{
+  if(current > 0)
+    {
+      current = (current - 1) % slides.length;
+      showSlide(current);
+    }
+  else
+    {
+        current = 0;
+        showSlide(current);
+    }
+}
+
+console.log("Clicked");
+
+//Event pages tiles
+let currentPage = 0;
+const tiles = document.querySelectorAll('#pastEvents .pastEventContainer');
+const tilesPerPage = 5;
+
+function renderPage(page){
+  currentPage = page;
+  tiles.forEach((tile, index) => {
+    if(index >= page * tilesPerPage && index < (page + 1) * tilesPerPage){
+      tile.style.display = "block";
+    } else{
+      tile.style.display = "none";
+    }
+  });
+
+  renderPagination();
+}
+
+function renderPagination(){
+  const pagination = document.getElementById("eventPages");
+  pagination.innerHTML = "";
+  const pageCount = Math.ceil(tiles.length / tilesPerPage);
+
+  const prevBtn = document.createElement("button");
+  prevBtn.textContent = "Prev";
+  prevBtn.disabled = currentPage === 0;
+  prevBtn.onclick = () => renderPage(currentPage - 1);
+  pagination.appendChild(prevBtn);
+
+  for(let i = 0; i < pageCount; i++){
+    const btn = document.createElement("button");
+    btn.textContent = i + 1;
+    if(i === currentPage) btn.classList.add("active");
+    btn.onclick = () => renderPage(i);
+    pagination.appendChild(btn);
+  }
+
+  const nextBtn = document.createElement("button");
+  nextBtn.textContent = "Next";
+  nextBtn.disabled = currentPage === pageCount-1;
+  nextBtn.onclick = () => renderPage(currentPage + 1);
+  pagination.appendChild(nextBtn);
+
+}
+
+renderPage(0);
+

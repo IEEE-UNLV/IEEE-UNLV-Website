@@ -183,6 +183,7 @@ hr{
     width:100vw;
     height:100vh;
     overflow:hidden;
+    max-width:100%;
     position:relative;
     background-color: #101924;
 }
@@ -286,7 +287,9 @@ hr{
     gap:6px;
 }
 
-.eventPages button{
+.eventPages button,
+.PaginationPrev,
+.PaginationNext{
     padding: 6px 12px;
     border:1px solid #aaa;
     background:#28405e;
@@ -296,6 +299,13 @@ hr{
 
 .eventPages button.active{
     background-color: #21344d;
+    color:white;
+    border-color: #21344d;
+}
+
+.PaginationPrev:hover,
+.PaginationNext:hover{
+background-color: #21344d;
     color:white;
     border-color: #21344d;
 }
@@ -418,6 +428,10 @@ footer{
     justify-content:center;
 }
 
+.contactcontainer{
+    align-items:flex-start;
+}
+
 .contactContainer h2{
     font-size:3rem;
     margin-bottom:1rem;
@@ -425,9 +439,15 @@ footer{
     margin-top:3rem;
 }
 
+.contactContainer h4{
+    text-align:left;
+    font-size:1.5rem;
+    margin:20px;
+}
+
 #contact p,
 #socials p{
-    text-align:center;
+    text-align:left;
     color: rgba(255, 255, 255, 0.637);
     font-size:1.5rem;
     margin:20px;
@@ -461,6 +481,25 @@ footer{
     color: rgba(255, 255, 255, 0.37);
 }
 
+.socialsInstagram,
+.socialsGitHub{
+    padding:10px;
+    border-radius:10px;
+    float:left;
+    margin-top:5px;
+}
+
+.socialsInstagramBtn{
+    
+}
+
+.socialsDiscord{
+    padding:10px;
+    border-radius:10px;
+    float:left;
+    height:auto;
+    margin-top:8px;
+}
 
 footer h2{
     font-size:20px;

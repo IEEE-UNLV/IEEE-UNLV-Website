@@ -22,6 +22,7 @@ function renderPagination(){
   const pageCount = Math.ceil(tiles.length / tilesPerPage);
 
   const prevBtn = document.createElement("button");
+  prevBtn.className = "PaginationPrev";
   prevBtn.textContent = "Prev";
   prevBtn.disabled = currentPage === 0;
   prevBtn.onclick = () => renderPage(currentPage - 1);
@@ -36,6 +37,7 @@ function renderPagination(){
   }
 
   const nextBtn = document.createElement("button");
+  nextBtn.className = "PaginationNext";
   nextBtn.textContent = "Next";
   nextBtn.disabled = currentPage === pageCount-1;
   nextBtn.onclick = () => renderPage(currentPage + 1);

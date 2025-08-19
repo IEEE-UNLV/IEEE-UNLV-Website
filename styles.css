@@ -381,8 +381,7 @@ hr{
 .AboutContainer,
 .eventContainer,
 .memberContainer,
-.contactsContainer,
-.officerContainer{
+.contactContainer{
     background-color: #0f1e2c;
     background-image:
         repeating-linear-gradient(45deg,#162b3f, transparent 1px 40px),
@@ -404,6 +403,64 @@ footer{
     justify-content:space-between;
     z-index:1000;
 }
+
+#contact{
+    display:grid;
+    gap:1rem;
+    grid-template-columns:repeat(2, 500px);
+    justify-content:center;
+}
+
+#socials{
+    display:grid;
+    gap:1rem;
+    grid-template-columns:repeat(2, 500px);
+    justify-content:center;
+}
+
+.contactContainer h2{
+    font-size:3rem;
+    margin-bottom:1rem;
+    text-align:center;
+    margin-top:3rem;
+}
+
+#contact p,
+#socials p{
+    text-align:center;
+    color: rgba(255, 255, 255, 0.637);
+    font-size:1.5rem;
+    margin:20px;
+}
+
+#contactBox{
+    background-color:#172c3f;
+    padding:1rem;
+    border-radius:20px;
+    width:400px;
+    margin:auto;
+}
+
+#socialMediaBox{
+    background-color:#172c3f;
+    padding:1rem;
+    border-radius:20px;
+    width:400px;
+    margin:auto;
+}
+
+#contact a,
+#socials a{
+    color: rgba(255, 255, 255, 0.637);
+    font-size:1.5rem;
+    font-style:italic;
+}
+
+#contact a:hover,
+#socials a:hover{
+    color: rgba(255, 255, 255, 0.37);
+}
+
 
 footer h2{
     font-size:20px;

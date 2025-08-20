@@ -180,16 +180,19 @@ hr{
 }
 
 .GalleryContainer{
-    width:100vw;
-    height:100vh;
     overflow:hidden;
     max-width:100%;
     position:relative;
     background-color: #101924;
+    display: grid;
+    padding: 50px;
 }
 
 .GalleryContent.active{
     display:block;
+    margin:auto;
+    width:700px;
+    height:600px;
 }
 
 .GalleryContent{
@@ -197,7 +200,14 @@ hr{
 }
 
 .GalleryContent img{
-    border-radius:160px;
+    border-radius:30px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.GalleryContent p{
+    
 }
 
 .prev, .next {
@@ -214,8 +224,8 @@ hr{
   transform: translateY(-50%);
 }
 
-.prev { left: 130px; }
-.next { right: 130px; }
+.prev { left: 250px; }
+.next { right: 250px; }
 
 .prev:hover, .next:hover {
   background-color: #000000;
@@ -398,6 +408,10 @@ background-color: #21344d;
 .AboutContainer p{
     text-align:justify;
     
+}
+
+.AboutImages{
+    justify-content:center;
 }
 
 footer{

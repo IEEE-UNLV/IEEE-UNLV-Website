@@ -414,18 +414,20 @@ footer{
     z-index:1000;
 }
 
-#contact{
+#contact,
+#socials{
     display:grid;
     gap:1rem;
     grid-template-columns:repeat(2, 500px);
     justify-content:center;
 }
 
-#socials{
+#officers{
     display:grid;
     gap:1rem;
-    grid-template-columns:repeat(2, 500px);
+    grid-template-columns:repeat(3, 500px);
     justify-content:center;
+    place-items:center;
 }
 
 .contactcontainer{
@@ -471,9 +473,7 @@ footer{
 
 #contact a,
 #socials a{
-    color: rgba(255, 255, 255, 0.637);
     font-size:1.5rem;
-    font-style:italic;
 }
 
 #contact a:hover,
@@ -481,7 +481,6 @@ footer{
     color: rgba(255, 255, 255, 0.37);
 }
 
-.socialsInstagram,
 .socialsGitHub{
     padding:10px;
     border-radius:10px;
@@ -489,8 +488,28 @@ footer{
     margin-top:5px;
 }
 
-.socialsInstagramBtn{
-    
+.socialsInstagram{
+    padding:10px;
+    border-radius:10px;
+    float:left;
+    margin-top:5px;
+}
+
+#contactBox button,
+#socialMediaBox button{
+    background-color: #28405e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 10px;
+}
+
+#contactBox button:hover,
+#socialMediaBox button:hover{
+    background-color:#182638;
 }
 
 .socialsDiscord{
@@ -499,6 +518,18 @@ footer{
     float:left;
     height:auto;
     margin-top:8px;
+}
+
+#officerBox{
+    background-color:#080d13;
+    border-radius:80px;
+    width:300px;
+    height:300px;
+    align-items:center;
+}
+
+#officerBox img{
+    margin-top:40px;
 }
 
 footer h2{

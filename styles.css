@@ -206,10 +206,6 @@ hr{
     object-fit: cover;
 }
 
-.GalleryContent p{
-    
-}
-
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -338,6 +334,7 @@ background-color: #21344d;
     margin: 0 auto;
     text-align:center;
     background-color:#0f1e2c;
+    width:60%;
 }
 
 .memberContainer div{
@@ -353,7 +350,7 @@ background-color: #21344d;
 .memberContainer section{
     font-size:1.5rem;
     margin:1rem auto;
-    width:800px;
+    width:auto;
     color: rgba(255, 255, 255, 0.637);
     background-color:#172c3f;
     border-radius: 10px;
@@ -407,7 +404,6 @@ background-color: #21344d;
 
 .AboutContainer p{
     text-align:justify;
-    
 }
 
 .AboutImages{
@@ -435,14 +431,15 @@ footer{
 
 #officers{
     display:grid;
-    gap:1rem;
-    grid-template-columns:repeat(3, 500px);
+    gap:5%;
+    grid-template-columns:repeat(3, 400px);
     justify-content:center;
     place-items:center;
 }
 
-.contactcontainer{
-    align-items:flex-start;
+.contactContainer {
+    width:100%;
+
 }
 
 .contactContainer h2{
@@ -470,7 +467,7 @@ footer{
     background-color:#172c3f;
     padding:1rem;
     border-radius:20px;
-    width:400px;
+    width:80%;
     margin:auto;
 }
 
@@ -478,7 +475,7 @@ footer{
     background-color:#172c3f;
     padding:1rem;
     border-radius:20px;
-    width:400px;
+    width:80%;
     margin:auto;
 }
 
@@ -533,13 +530,14 @@ footer{
 #officerBox{
     background-color:#080d13;
     border-radius:80px;
-    width:300px;
-    height:300px;
+    width:70%;
+    height:100%;
+    padding:1%;
     align-items:center;
 }
 
 #officerBox img{
-    margin-top:40px;
+    padding:5%
 }
 
 footer h2{
@@ -654,12 +652,50 @@ footer li{
         width:300px;
     }
 
-    .GalleryContainer{
-    width:100vw;
-    height:100vh;
-    overflow:hidden;
-    max-width:100%;
-    position:relative;
-    background-color: #101924;
-}
+    /*Adjusting size of gallery images in About Us*/
+    .GalleryContent.active{
+        display:block;
+        margin:auto;
+        width:600px;
+        height:600px;
+    }
+
+    /*Adjusting the position of prev and next arrows in About Us*/
+    .prev { left: 10px; }
+    .next { right: 10px; }
+    
+    hr{
+    width:auto;
+    }
+    
+    /*Resizing Contact Us page*/
+    #contact,
+    #socials{
+        grid-template-columns:repeat(2, 50%);
+    }
+
+    #officers{
+        margin-bottom:40px;
+        grid-template-columns:repeat(2, 40%);
+    }
+
+    #contactBox{
+        width:auto;
+    }
+
+    #socialMediaBox{
+        width:auto;
+    }
+
+    #officerBox{
+        width:90%;
+        height:105%;
+    }
+    .contactContainer hr{
+        width:55%;
+    }
+    #officerBox img{
+        margin-top:10px;
+        width:60%;
+    }
 }

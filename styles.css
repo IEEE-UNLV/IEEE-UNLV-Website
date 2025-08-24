@@ -3,6 +3,7 @@
     color:white;
     padding:0px;
     margin:0px;
+    max-width:13000px;
 }
 
 nav{
@@ -62,12 +63,19 @@ a{
     margin-right:3px;
 }
 
+html, body{
+    height:100%;
+    margin:0;
+}
+
 body{
     background-color: #0f1e2c;
     background-image:
         repeating-linear-gradient(45deg,#162b3f, transparent 1px 40px),
         repeating-linear-gradient(-45deg, #162b3f, transparent 1px 40px);
     min-height:100vh;
+    display:flex;
+    flex-direction:column;
 }
 
 #navtitle{
@@ -127,19 +135,22 @@ hr{
     margin: auto;
 }
 
-#about{
+#about,
+#join{
     padding: 8rem;
     justify-content:center;
     background-size:cover;
     background-position:center;
 }
 
-#about h2{
+#about h2,
+#join h2{
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
-#about p{
+#about p,
+#join p{
     font-size: 1.5rem;
     margin: 20px auto;
     width:800px;
@@ -220,8 +231,8 @@ hr{
   transform: translateY(-50%);
 }
 
-.prev { left: 250px; }
-.next { right: 250px; }
+.prev { left: 25%; }
+.next { right: 25%; }
 
 .prev:hover, .next:hover {
   background-color: #000000;
@@ -324,17 +335,21 @@ background-color: #21344d;
 }
 
 #membership{
-    padding: 8rem;
+    padding: 2rem;
     margin: 0 auto;
     text-align: center;
 }
 
 .memberContainer{
-    padding: 8rem;
+    padding: 2rem;
+    display:flex;
     margin: 0 auto;
+    justify-content:center;
     text-align:center;
     background-color:#0f1e2c;
-    width:60%;
+    width:90%;
+    max-width:1200px;
+    flex-wrap:wrap;
 }
 
 .memberContainer div{
@@ -367,6 +382,8 @@ background-color: #21344d;
     border-radius: 10px;
     border: 5px solid #1b2c41;
     padding:20px;
+    width:100%;
+    max-width:800px;
 }
 
 .JoinIEEEButton,
@@ -419,6 +436,7 @@ footer{
     display:flex;
     justify-content:space-between;
     z-index:1000;
+    margin-top:auto;
 }
 
 #contact,
@@ -640,15 +658,9 @@ footer li{
         transform: rotate(45deg) translate(-5px, -6px);
     }
 
-    #about p{
-        width:300px;
-    }
-    
+    #about p,
+    #join p,
     #events p{
-        width:300px;
-    }
-
-    #membership p{
         width:300px;
     }
 
@@ -661,13 +673,18 @@ footer li{
     }
 
     /*Adjusting the position of prev and next arrows in About Us*/
-    .prev { left: 10px; }
-    .next { right: 10px; }
+    .prev { left: 10%; }
+    .next { right: 10%; }
     
     hr{
     width:auto;
     }
     
+    /*Join Us page*/
+    .memberContainer{
+        width:90%;
+    }
+
     /*Resizing Contact Us page*/
     #contact,
     #socials{
@@ -698,4 +715,154 @@ footer li{
         margin-top:10px;
         width:60%;
     }
+}
+
+/*Navigation Menu when browswer is <=480px*/
+@media (max-width: 480px) {
+    .navLinks li a{
+        font-size:80%;
+    }
+
+    #titleCard h1{
+        font-size: 120%;
+        margin: 5%;
+    }
+
+    #titleCard hr{
+        margin:10%;
+        width:100%;
+    }
+
+    #titleCard p{
+        font-size: 65%;
+        margin: auto;
+    }
+
+    .Home-IEEE-Logo{
+    width: 80%;
+    }
+
+    #about h2,
+    #events h2,
+    #join h2{
+        font-size:190%;
+
+    }
+    #about p,
+    #events p,
+    #join p{
+        width:80%;
+        font-size:80%;
+    }
+
+    #about,
+    #events,
+    #join{
+        width:auto;
+    }
+
+    #WhoWeAre p{
+        font-size:1rem;
+    }
+
+    /*Adjusting size of gallery images in About Us*/
+    .GalleryContent.active{
+        width:105%;
+    }
+
+    /*Events Page*/
+    .pastEventContainer{    
+    font-size: 1rem;
+    width:100%;
+    }
+
+    .eventPages{
+        display:flex;
+        justify-content:center;
+        gap:6px;
+    }
+
+    /*Adjusting the position of prev and next arrows in About Us*/
+    .prev { left: 12%; }
+    
+    hr{
+    width:auto;
+    }
+    
+    /*Resizing Join Us page*/
+    .memberContainer{
+        width:10%;
+
+    }
+
+    .memberContainer h2{
+        font-size: 150%;
+    }
+
+    .memberContainer section{
+        font-size:100%;
+    }
+
+    .JoinIEEEButton,
+    .JoinInvolvementButton, 
+    .DiscordButton, 
+    .InstagramButton{
+        font-size: 0.9rem;
+    }
+
+    /*Resizing Contact Us page*/
+    #contact,
+    #socials{
+        grid-template-columns:repeat(1, 100%);
+    }
+
+    #officers{
+        margin-bottom:40px;
+        grid-template-columns:repeat(2, 40%);
+    }
+
+    .contactContainer h2{
+        font-size:2rem;
+    }
+
+    #contactBox{
+        width:90%;
+    }
+
+    #contactBox h4,
+    #socialMediaBox h4{
+        font-size:1.5rem;
+    }
+
+    #contactBox p,
+    #socialMediaBox p{
+        font-size:1rem;
+    }
+
+    #contact a,
+    #socials a{
+        font-size:1rem;
+    }
+
+    #socialMediaBox{
+        width:100%;
+    }
+
+    #officerBox{
+        width:100%;
+        height:110%;
+        border-radius:30%;
+    }
+
+    #officerBox h4{
+        font-size:1.2rem;
+    }
+    #officerBox p{
+        font-size:0.9rem;
+    }
+
+    #officerBox img{
+        width:50%;
+    }
+
 }

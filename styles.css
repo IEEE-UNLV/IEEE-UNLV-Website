@@ -85,7 +85,7 @@ body{
     
 }
 #navtitle:hover{
-    box-shadow:0 0 0 8px rgba(0, 0, 0, 0.2);
+    box-shadow:0 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: #162231;
 }
 
@@ -115,6 +115,7 @@ body{
     font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.637);
     margin: 1rem;
+    margin-bottom:10rem;
     text-align: center;
 }
 
@@ -137,21 +138,24 @@ hr{
 
 .homepageContainer{
     width:0 auto;
-    padding:auto;
     justify-content:center;
     background-size:cover;
     background-position:center;
+    margin-bottom: 10%;
 }
 
 
 #about h2,
-#join h2{
+#join h2,
+#event h2{
     font-size: 3rem;
     margin-bottom: 1rem;
+    margin-top:5rem;
 }
 
 #about p,
-#join p{
+#join p,
+#event p{
     font-size: 1.5rem;
     margin: 20px auto;
     width:800px;
@@ -159,7 +163,7 @@ hr{
     background-color:#172c3f;
     border-radius: 10px;
     border: 5px solid #1b2c41;
-    padding:5%;
+    padding:3%;
 }
 
 #aboutContainer{
@@ -195,9 +199,10 @@ hr{
     overflow:hidden;
     max-width:100%;
     position:relative;
-    background-color: #101924;
     border-radius:30px;
     padding: 50px;
+    margin-bottom:1rem;
+    margin: 0 auto;
 }
 
 .GalleryContent.active{
@@ -205,7 +210,12 @@ hr{
     margin:0 auto;
     width:800px;
     height:600px;
-    
+    background-color: #101924;
+}
+
+.GalleryContent.active p{
+    text-align: center;
+    margin-top:5px;
 }
 
 .GalleryContent{
@@ -213,7 +223,6 @@ hr{
 }
 
 .GalleryContent img{
-    
     width: 100%;
     height: 100%;
     max-width:100%;
@@ -256,27 +265,12 @@ hr{
 .AboutButton:hover,
 .EventsButton:hover,
 .JoinButton:hover{
-    background-color:#182638;
+    background-color:#1f2f46;
     color:rgba(255, 255, 255, 0.637);
 }
 
-#events h2{
-    font-size:3rem;
-    margin-bottom:1rem;
-}
-
-#events p{
-    font-size: 1.5rem;
-    margin: 20px auto;
-    width: 800px;
-    color: rgba(255, 255, 255, 0.637);
-    background-color:#172c3f;
-    border-radius: 10px;
-    border: 5px solid #1b2c41;
-    padding:20px;
-}
-
-.pastEvents{
+.pastEvents,
+#currentEvents{
     font-size:2rem;
     flex-direction:column;
     gap:12px;
@@ -285,7 +279,8 @@ hr{
     margin: 20px auto;
 }
 
-.pastEventContainer{    
+.pastEventContainer,
+.currentEventsContainer{    
     font-size: 25px;
     margin: 20px auto;
     background-color:#172c3f;
@@ -325,7 +320,8 @@ background-color: #21344d;
     border-color: #21344d;
 }
 
-.pastEventContainer p{
+.pastEventContainer p,
+.currentEventsContainer p{
     color: rgba(255, 255, 255, 0.637);
     font-size: 18px;
     padding:10px;
@@ -401,7 +397,7 @@ background-color: #21344d;
 .DiscordButton:hover,
 .InstagramButton:hover,
 .JoinInvolvementButton:hover{
-    background-color:#182638;
+    background-color: #1f3248;
     color:rgba(255, 255, 255, 0.637);
 }
 
@@ -501,6 +497,7 @@ footer{
 #contact a:hover,
 #socials a:hover{
     color: rgba(255, 255, 255, 0.37);
+    background-color:#1e374e;
 }
 
 .socialsGitHub{
@@ -659,7 +656,8 @@ footer li{
 
     #about p,
     #join p,
-    #events p{
+    #events p,
+    #event p{
         width:300px;
     }
 
@@ -671,7 +669,19 @@ footer li{
     }
 
     /*Adjusting size of gallery images in About Us*/
-    
+
+.GalleryContent.active{
+    background-color: #070a0f;
+}
+
+.GalleryContent.active p{
+    font-size:small;
+    width:75%;
+}
+
+.GalleryContent img{
+    width:75%;
+}
 
     /*Adjusting the position of prev and next arrows in About Us*/
     .prev { left: 10%; }
@@ -753,21 +763,25 @@ footer li{
 
     #about h2,
     #events h2,
-    #join h2{
+    #join h2,
+    #event h2{
         font-size:190%;
     }
 
     #about p,
     #events p,
-    #join p{
+    #join p,
+    #event p{
         width:80%;
         font-size:80%;
     }
 
     #about,
     #events,
-    #join{
+    #join,
+    #event{
         width:auto;
+        margin-bottom:0;
     }
 
     #WhoWeAre p{
@@ -892,15 +906,19 @@ footer li{
 
     #about p,
     #events p,
-    #join p{
+    #join p,
+    #event p{
         width:80%;
-        font-size:80%;
+        font-size:100%;
+        padding:5%;
     }
 
     #about,
     #events,
-    #join{
+    #join,
+    #event{
         width:auto;
+        margin:0;
     }
 
     #WhoWeAre p{

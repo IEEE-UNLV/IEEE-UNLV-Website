@@ -331,7 +331,7 @@ background-color: #21344d;
 
 .pastEventContainer a:hover,
 .currentEventsContainer a:hover{
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 #membership{

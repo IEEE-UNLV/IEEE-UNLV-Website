@@ -321,10 +321,17 @@ background-color: #21344d;
 }
 
 .pastEventContainer p,
-.currentEventsContainer p{
+.pastEventContainer a,
+.currentEventsContainer p,
+.currentEventsContainer a{
     color: rgba(255, 255, 255, 0.637);
     font-size: 18px;
     padding:10px;
+}
+
+.pastEventContainer a:hover,
+.currentEventsContainer a:hover{
+    color: rgba(255, 255, 255, 0.4);
 }
 
 #membership{

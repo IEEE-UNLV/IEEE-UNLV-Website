@@ -92,7 +92,7 @@ body{
 #titleCard{
     text-align: center;
     font-size:20px;
-    background: linear-gradient(rgba(76, 86, 95, 0.705),rgba(16, 32, 45, 0.932)), url('/IEEE-UNLV-Website/images/Soldering.jpg');
+    background: linear-gradient(rgba(76, 86, 95, 0.705),rgba(16, 32, 45, 0.932)), url('/images/Soldering.jpg');
     background-size: cover;
     background-position: center; 
     padding:auto;
@@ -167,7 +167,7 @@ hr{
 }
 
 #aboutContainer{
-    background: linear-gradient(rgba(76, 86, 95, 0.705),rgba(16, 32, 45, 0.932)), url('/IEEE-UNLV-Website/images/IEEEBulletinFall2025.jpg');
+    background: linear-gradient(rgba(76, 86, 95, 0.705),rgba(16, 32, 45, 0.932)), url('/images/IEEEBulletinFall2025.jpg');
     background-size:cover;
     background-attachment:fixed;
     width:0 auto;

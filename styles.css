@@ -436,6 +436,7 @@ footer{
     justify-content:space-between;
     z-index:1000;
     margin-top:auto;
+    clear: both;
 }
 
 #contact,
@@ -449,7 +450,7 @@ footer{
 #officers{
     display:grid;
     gap:5%;
-    grid-template-columns:repeat(3, 600px);
+    grid-template-columns:repeat(3, 400px);
     justify-content:center;
     place-items:center;
 }

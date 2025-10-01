@@ -449,7 +449,7 @@ footer{
 #officers{
     display:grid;
     gap:5%;
-    grid-template-columns:repeat(3, 400px);
+    grid-template-columns:repeat(3, 600px);
     justify-content:center;
     place-items:center;
 }

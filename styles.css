@@ -457,7 +457,7 @@ footer{
 
 .contactContainer {
     width:100%;
-
+    flex: 1;
 }
 
 .contactContainer h2{

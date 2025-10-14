@@ -28,16 +28,16 @@ function nextSlide()
 
 function prevSlide()
 {
-  if(current > 0)
-    {
-      current = (current - 1) % slides.length;
+  //if(current > 0)
+    //{
+      current = (current - 1 + slides.length ) % slides.length;
       showSlide(current);
-    }
-  else
-    {
-        current = 0;
-        showSlide(current);
-    }
+   // }
+  //else
+    //{
+        //current = 0;
+       //showSlide(current);
+   // }
 }
 
 console.log("Clicked");

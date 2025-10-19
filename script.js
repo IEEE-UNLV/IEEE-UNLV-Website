@@ -10,7 +10,7 @@ menu.addEventListener('click', function(){
 //About Page Image Slideshow
 let current = 0;
 const slides = document.querySelectorAll('.GalleryContent');
-console.log(slides);
+//console.log(slides);
 function showSlide(index)
 {
   slides.forEach(slide => slide.classList.remove('active'));
@@ -19,8 +19,8 @@ function showSlide(index)
 
 function nextSlide()
 {
-  console.log("nextSlide()");
-  console.log(current);
+  //console.log("nextSlide()");
+  //console.log(current);
   current = (current + 1) % slides.length;
 
   showSlide(current);
@@ -28,19 +28,11 @@ function nextSlide()
 
 function prevSlide()
 {
-  if(current > 0)
-    {
-      current = (current - 1) % slides.length;
+      current = (current - 1 + slides.length ) % slides.length;
       showSlide(current);
-    }
-  else
-    {
-        current = 0;
-        showSlide(current);
-    }
 }
 
-console.log("Clicked");
+//console.log("Clicked");
 
 
 

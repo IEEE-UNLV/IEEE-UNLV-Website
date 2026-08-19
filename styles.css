@@ -310,7 +310,7 @@ hr{
     border: 5px solid #1b2c41;
     padding:20px;
     text-align:center;
-    width:0 auto;
+    max-width:100%;
 }
 
 .eventPages{
@@ -753,4 +753,9 @@ footer li{
         grid-template-columns:1fr;
     }
 
+    .pastEventContainer,
+    .currentEventsContainer{
+        width:auto;
+        padding: 5px;
+    }
 }

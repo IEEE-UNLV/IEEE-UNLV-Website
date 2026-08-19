@@ -166,16 +166,12 @@ hr{
     padding:3%;
 }
 
-#aboutContainer{
-    background: linear-gradient(rgba(76, 86, 95, 0.705),rgba(16, 32, 45, 0.932)), url('/images/IEEEBulletinFall2025.jpg');
-    background-size:cover;
-    background-attachment:fixed;
-    width:0 auto;
-    padding: auto;
-}
 
-#aboutContainer h2{
+
+#AboutContainer h2{
     font-size:2.5rem;
+    text-align:center;
+    padding:20px;
 }
 
 
@@ -186,14 +182,15 @@ hr{
     padding:20px;
 }
 
-#WhoWeAre p{
+#WhoWeAreContainer p,
+#WhatWeDoContainer p{
     color: rgba(255, 255, 255, 0.637);
     text-indent:40px;
-}
-
-#WhoWeAre{
-    text-align:left;
-    font-size: 1.5rem;
+    background-color:#172c3f;
+    border-radius: 10px;
+    border: 5px solid #1b2c41;
+    padding:3%;
+    
 }
 
 .gallerySection {
@@ -424,18 +421,20 @@ footer{
 }
 
 #contact,
-#socials{
+#socials,
+#WhoWeAre,
+#WhatWeDo{
     display:grid;
     gap:1rem;
-    grid-template-columns:repeat(2, 500px);
+    grid-template-columns:repeat(2, 1fr);
     justify-content:center;
 }
 
-.officers{
+#officers{
     display:grid;
     gap: 2rem;
     grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-    margin-top: 2rem;
+    justify-content:center;
 }
 
 .contactContainer {
@@ -450,34 +449,34 @@ footer{
     margin-top:3rem;
 }
 
-.contactContainer h4{
+.contactContainer h4,
+#WhoWeAre h4,
+#WhatWeDo h4{
     text-align:left;
     font-size:1.5rem;
     margin:20px;
 }
 
 #contact p,
-#socials p{
+#socials p,
+#WhoWeAre p,
+#WhatWeDo p{
     text-align:left;
     color: rgba(255, 255, 255, 0.637);
     font-size:1.5rem;
     margin:20px;
 }
 
-#contactBox{
+#contactBox,
+#socialMediaBox,
+#WhatWeDoBox,
+#WhoWeAreBox{
     background-color:#172c3f;
     padding:1rem;
     border-radius:20px;
     width:80%;
     margin:auto;
-}
-
-#socialMediaBox{
-    background-color:#172c3f;
-    padding:1rem;
-    border-radius:20px;
-    width:80%;
-    margin:auto;
+    height:90%;
 }
 
 #contact a,
@@ -669,20 +668,21 @@ footer li{
 
     /*Resizing Contact Us page*/
     #contact,
-    #socials{
+    #socials,
+    #WhoWeAre,
+    #WhatWeDo{
         grid-template-columns:repeat(2, 50%);
     }
 
-    .officers{
+    #officers{
         margin-bottom:40px;
         grid-template-columns:repeat(2, 40%);
     }
 
-    #contactBox{
-        width:auto;
-    }
-
-    #socialMediaBox{
+    #contactBox,
+    #socialMediaBox,
+    #WhoWeAreBox,
+    #WhatWeDoBox{
         width:auto;
     }
 
@@ -698,11 +698,11 @@ footer li{
 
 @media (max-width: 480px) {
     #contact,
-    #socials{
+    #socials,
+    #WhoWeAre,
+    #WhatWeDo,
+    #officers{
         grid-template-columns:1fr;
     }
 
-    .officers{
-        grid-template-columns:1fr;
-    }
 }

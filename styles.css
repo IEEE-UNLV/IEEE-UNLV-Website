@@ -356,57 +356,6 @@ background-color: #21344d;
     color: rgba(255, 255, 255, 0.8);
 }
 
-#membership{
-    padding: 2rem;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.memberContainer{
-    padding: 2rem;
-    display:flex;
-    margin: 0 auto;
-    justify-content:center;
-    text-align:center;
-    background-color:#0f1e2c;
-    width:0 auto;
-    
-}
-
-.memberContainer div{
-    padding:20px;
-}
-
-#membership h2,
-.memberContainer h2{
-    font-size: 3rem;
-    margin-bottom:1rem;
-}
-
-.memberContainer section{
-    font-size:1.5rem;
-    margin:1rem auto;
-    width:auto;
-    color: rgba(255, 255, 255, 0.637);
-    background-color:#172c3f;
-    border-radius: 10px;
-    border: 5px solid #1b2c41;
-    padding:60px;
-}
-
-#membership p{
-    font-size:1.5rem;
-    margin:1rem auto;
-    width:800px;
-    color: rgba(255, 255, 255, 0.637);
-    background-color:#172c3f;
-    border-radius: 10px;
-    border: 5px solid #1b2c41;
-    padding:20px;
-    width:100%;
-    max-width:800px;
-}
-
 .JoinIEEEButton,
 .JoinInvolvementButton, 
 .DiscordButton, 
@@ -440,6 +389,23 @@ background-color: #21344d;
         repeating-linear-gradient(-45deg, #162b3f, transparent 1px 40px);
 }
 
+.memberContainer h1{
+    font-size:3rem;
+    text-align:center;
+    padding:20px;
+}
+
+.memberContainer hr{
+    width:50%;
+    margin-bottom:20px;
+}
+
+.memberContainer p{
+    text-align:center;
+    font-size:1.5rem;
+    margin:20px;
+}
+
 .AboutContainer p{
     text-align:justify;
 }
@@ -471,6 +437,18 @@ footer{
     justify-content:center;
 }
 
+#membership
+{
+    display:grid;
+    gap:5rem;
+    grid-template-columns:repeat(1, 1fr);
+    justify-content:center;
+    width:50%;
+}
+
+
+
+
 #officers{
     display:grid;
     gap: 2rem;
@@ -501,7 +479,8 @@ footer{
 #contact p,
 #socials p,
 #WhoWeAre p,
-#WhatWeDo p{
+#WhatWeDo p,
+#membership p{
     text-align:left;
     color: rgba(255, 255, 255, 0.637);
     font-size:1.5rem;
@@ -511,7 +490,8 @@ footer{
 #contactBox,
 #socialMediaBox,
 #WhatWeDoBox,
-#WhoWeAreBox{
+#WhoWeAreBox,
+#membershipBox{
     background-color:#172c3f;
     padding:1rem;
     border-radius:20px;
@@ -758,4 +738,17 @@ footer li{
         width:auto;
         padding: 5px;
     }
+
+    #membershipBox{
+        width:100%;
+    }
+
+    .JoinInvolvementButton,
+    .JoinIEEEButton,
+    .DiscordButton,
+    .InstagramButton{
+        width:50%;
+        margin-bottom:10px;
+    }
+
 }

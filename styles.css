@@ -145,12 +145,46 @@ hr{
 }
 
 
+.homepageSections{
+    width: min(1200px, calc(100% - 2rem));
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+.homepageSections > section {
+    background-color: #172c3f;
+    border: 5px solid #1b2c41;
+    border-radius: 18px;
+    padding: 2rem 1.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#join{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    background-color: #172c3f;
+    border: 5px solid #1b2c41;
+    border-radius: 18px;
+    padding: 5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2rem;
+    width:50%;
+}
+
 #about h2,
 #join h2,
 #event h2{
     font-size: 3rem;
     margin-bottom: 1rem;
-    margin-top:5rem;
+    margin-top: 0;
 }
 
 #about p,
@@ -158,15 +192,20 @@ hr{
 #event p{
     font-size: 1.5rem;
     margin: 20px auto;
-    width:800px;
+    width: 100%;
+    max-width: 100%;
     color: rgba(255, 255, 255, 0.637);
-    background-color:#172c3f;
-    border-radius: 10px;
-    border: 5px solid #1b2c41;
-    padding:3%;
 }
 
-
+#aboutBox,
+#eventBox,
+#joinBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.25rem;
+    height: 100%;
+}
 
 #AboutContainer h2{
     font-size:2.5rem;
@@ -236,11 +275,13 @@ hr{
 .JoinButton{
     background-color: #28405e;
     color: white;
-    padding:1%;
+    padding:3%;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
+    width:50%;
+    margin: 0 auto;
 }
 
 .AboutButton:hover,
@@ -644,17 +685,20 @@ footer li{
     }
 
     #about p,
-    #join p,
     #events p,
     #event p{
         width:300px;
     }
 
     .AboutButton,
-    .EventsButton,
-    .JoinButton{
+    .EventsButton{
         font-size:90%;
-        padding:2%;
+        
+    }
+
+    #join{
+        width:90%;
+        padding:2rem;
     }
 
     hr{
@@ -702,6 +746,10 @@ footer li{
     #WhoWeAre,
     #WhatWeDo,
     #officers{
+        grid-template-columns:1fr;
+    }
+
+    .homepageSections{
         grid-template-columns:1fr;
     }
 

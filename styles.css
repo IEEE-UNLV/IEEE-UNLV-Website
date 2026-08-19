@@ -145,12 +145,46 @@ hr{
 }
 
 
+.homepageSections{
+    width: min(1200px, calc(100% - 2rem));
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+.homepageSections > section {
+    background-color: #172c3f;
+    border: 5px solid #1b2c41;
+    border-radius: 18px;
+    padding: 2rem 1.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#join{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    background-color: #172c3f;
+    border: 5px solid #1b2c41;
+    border-radius: 18px;
+    padding: 5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2rem;
+    width:50%;
+}
+
 #about h2,
 #join h2,
 #event h2{
     font-size: 3rem;
     margin-bottom: 1rem;
-    margin-top:5rem;
+    margin-top: 0;
 }
 
 #about p,
@@ -158,24 +192,25 @@ hr{
 #event p{
     font-size: 1.5rem;
     margin: 20px auto;
-    width:800px;
+    width: 100%;
+    max-width: 100%;
     color: rgba(255, 255, 255, 0.637);
-    background-color:#172c3f;
-    border-radius: 10px;
-    border: 5px solid #1b2c41;
-    padding:3%;
 }
 
-#aboutContainer{
-    background: linear-gradient(rgba(76, 86, 95, 0.705),rgba(16, 32, 45, 0.932)), url('/images/IEEEBulletinFall2025.jpg');
-    background-size:cover;
-    background-attachment:fixed;
-    width:0 auto;
-    padding: auto;
+#aboutBox,
+#eventBox,
+#joinBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.25rem;
+    height: 100%;
 }
 
-#aboutContainer h2{
+#AboutContainer h2{
     font-size:2.5rem;
+    text-align:center;
+    padding:20px;
 }
 
 
@@ -186,14 +221,15 @@ hr{
     padding:20px;
 }
 
-#WhoWeAre p{
+#WhoWeAreContainer p,
+#WhatWeDoContainer p{
     color: rgba(255, 255, 255, 0.637);
     text-indent:40px;
-}
-
-#WhoWeAre{
-    text-align:left;
-    font-size: 1.5rem;
+    background-color:#172c3f;
+    border-radius: 10px;
+    border: 5px solid #1b2c41;
+    padding:3%;
+    
 }
 
 .gallerySection {
@@ -239,11 +275,13 @@ hr{
 .JoinButton{
     background-color: #28405e;
     color: white;
-    padding:1%;
+    padding:3%;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
+    width:50%;
+    margin: 0 auto;
 }
 
 .AboutButton:hover,
@@ -272,7 +310,7 @@ hr{
     border: 5px solid #1b2c41;
     padding:20px;
     text-align:center;
-    width:0 auto;
+    max-width:100%;
 }
 
 .eventPages{
@@ -318,57 +356,6 @@ background-color: #21344d;
     color: rgba(255, 255, 255, 0.8);
 }
 
-#membership{
-    padding: 2rem;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.memberContainer{
-    padding: 2rem;
-    display:flex;
-    margin: 0 auto;
-    justify-content:center;
-    text-align:center;
-    background-color:#0f1e2c;
-    width:0 auto;
-    
-}
-
-.memberContainer div{
-    padding:20px;
-}
-
-#membership h2,
-.memberContainer h2{
-    font-size: 3rem;
-    margin-bottom:1rem;
-}
-
-.memberContainer section{
-    font-size:1.5rem;
-    margin:1rem auto;
-    width:auto;
-    color: rgba(255, 255, 255, 0.637);
-    background-color:#172c3f;
-    border-radius: 10px;
-    border: 5px solid #1b2c41;
-    padding:60px;
-}
-
-#membership p{
-    font-size:1.5rem;
-    margin:1rem auto;
-    width:800px;
-    color: rgba(255, 255, 255, 0.637);
-    background-color:#172c3f;
-    border-radius: 10px;
-    border: 5px solid #1b2c41;
-    padding:20px;
-    width:100%;
-    max-width:800px;
-}
-
 .JoinIEEEButton,
 .JoinInvolvementButton, 
 .DiscordButton, 
@@ -402,6 +389,23 @@ background-color: #21344d;
         repeating-linear-gradient(-45deg, #162b3f, transparent 1px 40px);
 }
 
+.memberContainer h1{
+    font-size:3rem;
+    text-align:center;
+    padding:20px;
+}
+
+.memberContainer hr{
+    width:50%;
+    margin-bottom:20px;
+}
+
+.memberContainer p{
+    text-align:center;
+    font-size:1.5rem;
+    margin:20px;
+}
+
 .AboutContainer p{
     text-align:justify;
 }
@@ -424,18 +428,32 @@ footer{
 }
 
 #contact,
-#socials{
+#socials,
+#WhoWeAre,
+#WhatWeDo{
     display:grid;
     gap:1rem;
-    grid-template-columns:repeat(2, 500px);
+    grid-template-columns:repeat(2, 1fr);
     justify-content:center;
 }
 
-.officers{
+#membership
+{
+    display:grid;
+    gap:5rem;
+    grid-template-columns:repeat(1, 1fr);
+    justify-content:center;
+    width:50%;
+}
+
+
+
+
+#officers{
     display:grid;
     gap: 2rem;
     grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-    margin-top: 2rem;
+    justify-content:center;
 }
 
 .contactContainer {
@@ -450,34 +468,36 @@ footer{
     margin-top:3rem;
 }
 
-.contactContainer h4{
+.contactContainer h4,
+#WhoWeAre h4,
+#WhatWeDo h4{
     text-align:left;
     font-size:1.5rem;
     margin:20px;
 }
 
 #contact p,
-#socials p{
+#socials p,
+#WhoWeAre p,
+#WhatWeDo p,
+#membership p{
     text-align:left;
     color: rgba(255, 255, 255, 0.637);
     font-size:1.5rem;
     margin:20px;
 }
 
-#contactBox{
+#contactBox,
+#socialMediaBox,
+#WhatWeDoBox,
+#WhoWeAreBox,
+#membershipBox{
     background-color:#172c3f;
     padding:1rem;
     border-radius:20px;
     width:80%;
     margin:auto;
-}
-
-#socialMediaBox{
-    background-color:#172c3f;
-    padding:1rem;
-    border-radius:20px;
-    width:80%;
-    margin:auto;
+    height:90%;
 }
 
 #contact a,
@@ -645,17 +665,20 @@ footer li{
     }
 
     #about p,
-    #join p,
     #events p,
     #event p{
         width:300px;
     }
 
     .AboutButton,
-    .EventsButton,
-    .JoinButton{
+    .EventsButton{
         font-size:90%;
-        padding:2%;
+        
+    }
+
+    #join{
+        width:90%;
+        padding:2rem;
     }
 
     hr{
@@ -669,20 +692,21 @@ footer li{
 
     /*Resizing Contact Us page*/
     #contact,
-    #socials{
+    #socials,
+    #WhoWeAre,
+    #WhatWeDo{
         grid-template-columns:repeat(2, 50%);
     }
 
-    .officers{
+    #officers{
         margin-bottom:40px;
         grid-template-columns:repeat(2, 40%);
     }
 
-    #contactBox{
-        width:auto;
-    }
-
-    #socialMediaBox{
+    #contactBox,
+    #socialMediaBox,
+    #WhoWeAreBox,
+    #WhatWeDoBox{
         width:auto;
     }
 
@@ -698,11 +722,33 @@ footer li{
 
 @media (max-width: 480px) {
     #contact,
-    #socials{
+    #socials,
+    #WhoWeAre,
+    #WhatWeDo,
+    #officers{
         grid-template-columns:1fr;
     }
 
-    .officers{
+    .homepageSections{
         grid-template-columns:1fr;
     }
+
+    .pastEventContainer,
+    .currentEventsContainer{
+        width:auto;
+        padding: 5px;
+    }
+
+    #membershipBox{
+        width:100%;
+    }
+
+    .JoinInvolvementButton,
+    .JoinIEEEButton,
+    .DiscordButton,
+    .InstagramButton{
+        width:50%;
+        margin-bottom:10px;
+    }
+
 }

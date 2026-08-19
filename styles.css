@@ -731,6 +731,7 @@ footer li{
 
     .homepageSections{
         grid-template-columns:1fr;
+        width: auto;
     }
 
     .pastEventContainer,

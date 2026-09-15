@@ -308,7 +308,7 @@ hr{
 .GalleryContent img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 
@@ -846,6 +846,10 @@ footer li{
         width: 36px;
         height: 36px;
         font-size: 1.25rem;
+    }
+
+    .GalleryContent img {
+        object-fit: cover;
     }
 
     .pastEventContainer,

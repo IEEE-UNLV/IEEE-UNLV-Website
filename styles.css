@@ -785,6 +785,30 @@ footer li{
         grid-template-columns:1fr;
     }
 
+    #WhoWeAre,
+    #WhatWeDo,
+    #membership,
+    #currentEvents,
+    #pastEvents {
+        padding: 2rem 1rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #WhoWeAreBox,
+    #WhatWeDoBox,
+    #membershipBox,
+    .currentEventsContainer,
+    .pastEventContainer {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .memberContainer {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
     .homepageSections{
         grid-template-columns:1fr;
         width:100%;

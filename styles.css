@@ -75,6 +75,7 @@ body{
     min-height:100vh;
     display:flex;
     flex-direction:column;
+    overflow-x:hidden;
 }
 
 #navtitle{
@@ -160,6 +161,7 @@ hr{
     border-radius: 18px;
     padding: 2rem 1.5rem;
     box-sizing: border-box;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -246,9 +248,49 @@ hr{
 }
 
 .GalleryContainer{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+    width: min(100%, 900px);
+    overflow: hidden;
+}
+
+.GalleryCarousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.GalleryContent {
+    display: none;
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+}
+
+.GalleryContent.active {
+    display: block;
+}
+
+.galleryControl {
+    flex: 0 0 auto;
+    width: 42px;
+    height: 42px;
+    border: 0;
+    border-radius: 50%;
+    background-color: #28405e;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.galleryControl:hover {
+    background-color: #1f2f46;
+}
+
+.galleryStatus {
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.637);
 }
 
 .GalleryContent p{
@@ -721,6 +763,20 @@ footer li{
 }
 
 @media (max-width: 480px) {
+    #titleCard h1 {
+        font-size: 2rem;
+        overflow-wrap: anywhere;
+    }
+
+    #titleCard p {
+        font-size: 1.1rem;
+        overflow-wrap: anywhere;
+    }
+
+    #hompageSections {
+        padding: 2rem 1rem;
+    }
+
     #contact,
     #socials,
     #WhoWeAre,
@@ -732,6 +788,40 @@ footer li{
     .homepageSections{
         grid-template-columns:1fr;
         width:100%;
+    }
+
+    .homepageSections > section {
+        width: 100%;
+    }
+
+    #about p,
+    #event p,
+    #join p {
+        width: auto;
+        max-width: none;
+    }
+
+    footer {
+        flex-wrap: wrap;
+    }
+
+    .footer-column {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    .gallerySection {
+        padding: 3rem 1rem;
+    }
+
+    .GalleryCarousel {
+        gap: 0.5rem;
+    }
+
+    .galleryControl {
+        width: 36px;
+        height: 36px;
+        font-size: 1.25rem;
     }
 
     .pastEventContainer,

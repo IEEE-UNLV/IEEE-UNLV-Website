@@ -300,7 +300,7 @@ hr{
 
 .GalleryContent{
     position: relative;
-    height: 300px;
+    height: clamp(360px, 36vw, 500px);
     overflow: hidden;
     border-radius: 15px;
 }
@@ -850,6 +850,10 @@ footer li{
 
     .GalleryContent img {
         object-fit: cover;
+    }
+
+    .GalleryContent {
+        height: 300px;
     }
 
     .pastEventContainer,

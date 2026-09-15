@@ -36,7 +36,9 @@
         </section>
         <section class="gallerySection">
             <h2 class="section-title">2025 Gallery</h2>
-            <div class="GalleryContainer" id="gallery">
+            <div class="GalleryCarousel" aria-label="2025 photo gallery">
+                <button class="galleryControl galleryPrevious" type="button" aria-label="Previous gallery image">&#10094;</button>
+                <div class="GalleryContainer" id="gallery">
                 <div class="GalleryContent">
                     <img srcset="/images/IEEECTSoc_AI_Panel.jpg" alt="SolderingWorkshopFall2025" loading="lazy">
                      <p>January 18, 2026 | IEEE CTSoc Impact of AI Panel</p>
@@ -61,7 +63,10 @@
                     <img srcset="/images/IEEEFall25GeneralMeeting1.jpg" alt="FAll25GeneralMeet1"  loading="lazy">
                      <p>September 11, 2025 | Fall 2025 General Meeting 1</p>
                 </div>
+                </div>
+                <button class="galleryControl galleryNext" type="button" aria-label="Next gallery image">&#10095;</button>
             </div>
+            <div class="galleryStatus" aria-live="polite"></div>
         </section>
             <section id="hompageSections">
                 <div class="homepageSections">

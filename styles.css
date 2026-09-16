@@ -181,9 +181,23 @@ hr{
     width:50%;
 }
 
+#officerRecruitment {
+    background-color: #172c3f;
+    border: 5px solid #1b2c41;
+    border-radius: 18px;
+    padding: 5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2rem;
+    width: 50%;
+}
+
 #about h2,
 #join h2,
-#event h2{
+#event h2,
+#officerRecruitment h2{
     font-size: 3rem;
     margin-bottom: 1rem;
     margin-top: 0;
@@ -207,6 +221,77 @@ hr{
     justify-content: space-between;
     gap: 1.25rem;
     height: 100%;
+}
+
+#officerRecruitmentBox {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    align-items: stretch;
+    height: 100%;
+    margin-top: 1.5rem;
+}
+
+.recruitmentContent,
+.recruitmentContact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.recruitmentContact {
+    border-left: 1px solid rgba(255, 255, 255, 0.35);
+    padding-left: 2rem;
+    text-align: left;
+}
+
+.recruitmentContact h3 {
+    font-size: 1.5rem;
+}
+
+.recruitmentContact p,
+.recruitmentContact a {
+    color: rgba(255, 255, 255, 0.637);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.recruitmentContact a:hover {
+    color: white;
+}
+
+.recruitmentContent p {
+    font-size: 1.75rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.recruitmentContent .RecruitmentButton {
+    width: 80%;
+    padding: 1rem;
+    font-size: 1.25rem;
+    box-sizing: border-box;
+}
+
+.recruitmentContact .RecruitmentButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    min-width: 0;
+    padding: 0.75rem 1rem;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+}
+
+.recruitmentContact .RecruitmentButton img {
+    flex: 0 0 auto;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin: 0;
 }
 
 #AboutContainer h2{
@@ -315,7 +400,8 @@ hr{
 
 .AboutButton,
 .EventsButton,
-.JoinButton{
+.JoinButton,
+.RecruitmentButton{
     background-color: #28405e;
     color: white;
     padding:3%;
@@ -329,7 +415,8 @@ hr{
 
 .AboutButton:hover,
 .EventsButton:hover,
-.JoinButton:hover{
+.JoinButton:hover,
+.RecruitmentButton:hover{
     background-color:#1f2f46;
     color:rgba(255, 255, 255, 0.637);
 }
@@ -724,6 +811,17 @@ footer li{
         padding:2rem;
     }
 
+    #officerRecruitment {
+        width: 90%;
+        padding: 2rem;
+        box-sizing: border-box;
+    }
+
+    #officerRecruitment h2 {
+        font-size: 2rem;
+        overflow-wrap: anywhere;
+    }
+
     hr{
     width:50%;
     }
@@ -824,6 +922,22 @@ footer li{
     #join p {
         width: auto;
         max-width: none;
+    }
+
+    #officerRecruitmentBox {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .recruitmentContent .RecruitmentButton {
+        width: 100%;
+    }
+
+    .recruitmentContact {
+        border-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.35);
+        padding-left: 0;
+        padding-top: 1.5rem;
     }
 
     footer {

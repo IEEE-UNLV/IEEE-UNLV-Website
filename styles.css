@@ -567,6 +567,10 @@ footer{
     justify-content:center;
 }
 
+#WhatWeDo{
+    row-gap:2rem;
+}
+
 #membership
 {
     display:grid;
@@ -580,9 +584,9 @@ footer{
 
 
 #officers{
-    display:grid;
+    display:flex;
+    flex-wrap:wrap;
     gap: 2rem;
-    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
     justify-content:center;
 }
 
@@ -683,12 +687,21 @@ footer{
     background-color:#080d13;
     border-radius:15px;
     overflow: hidden;
+    width:100%;
+    max-width:320px;
+    flex:0 1 320px;
+    box-sizing:border-box;
 }
 
 #officerBox img{
-    width: 100%;
-    height: 300px;
+    display:block;
+    width:100%;
+    height:300px;
     object-fit: cover;
+}
+
+#officerBox img[src$="OfficerAvatar.png"]{
+    object-position:center top;
 }
 
 footer h2{
@@ -841,7 +854,6 @@ footer li{
 
     #officers{
         margin-bottom:40px;
-        grid-template-columns:repeat(2, 40%);
     }
 
     #contactBox,
@@ -851,10 +863,6 @@ footer li{
         width:auto;
     }
 
-    #officerBox{
-        width:90%;
-        height:105%;
-    }
     .contactContainer hr{
         width:55%;
     }
@@ -879,8 +887,7 @@ footer li{
     #contact,
     #socials,
     #WhoWeAre,
-    #WhatWeDo,
-    #officers{
+    #WhatWeDo{
         grid-template-columns:1fr;
     }
 
